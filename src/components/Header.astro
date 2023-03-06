@@ -3,29 +3,16 @@ import HeaderLink from './HeaderLink.astro'
 import { SITE_TITLE } from '../consts'
 ---
 
-<header>
+<header class="flex align-middle">
   <h2>
     {SITE_TITLE}
   </h2>
-  <nav>
+  <nav class="pl-8 flex flex-1 gap-4">
     <HeaderLink href="/">About me</HeaderLink>
+    <HeaderLink href="/techstack">Tech's</HeaderLink>
     <HeaderLink href="/blog">Blog</HeaderLink>
-    <HeaderLink href="/about">About</HeaderLink>
-    <HeaderLink href="/techstack">Tech Stack</HeaderLink>
-
-    <HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">
-      Twitter
-    </HeaderLink>
-    <HeaderLink href="https://github.com/withastro/astro" target="_blank">
-      GitHub
-    </HeaderLink>
   </nav>
+  <HeaderLink href="https://github.com/sharpyx-official" target="_blank">
+    GitHub
+  </HeaderLink>
 </header>
-<style>
-  header {
-    margin: 0em 0 2em;
-  }
-  h2 {
-    margin: 0.5em 0;
-  }
-</style>
