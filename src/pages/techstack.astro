@@ -1,5 +1,43 @@
 ---
-import Main from '@layouts/Main.astro'
+import {
+  mobile,
+  frontend,
+  backend,
+  otherStacks,
+  tools
+} from '@components/TechStack/TechStackDb'
+import TechStackSection from '@components/TechStack/TechStackSection.astro'
+import MainLayout from '@layouts/MainLayout.astro'
 ---
 
-<Main title="My tech stack" description="Artem Skopincev's tech stack" />
+<MainLayout title="My tech stack" description="Artem Skopincev's tech stack">
+  <h1 class="text-3xl text-center font-bold p-2 pb-3">My Tech Stack</h1>
+  <p class="pb-10">Here described my technical stack that i use</p>
+  <div class="stack-list flex flex-col gap-16">
+    <TechStackSection
+      title="Mobile development"
+      description="It's my main direction of development, i use:"
+      stackItems={mobile}
+    />
+    <TechStackSection
+      title="Frontend"
+      description="I used this tech items for my personal frontend projects"
+      stackItems={frontend}
+    />
+    <TechStackSection
+      title="Backend"
+      description="I used this tech items for my personal backend projects"
+      stackItems={backend}
+    />
+    <TechStackSection
+      title="Other stack's"
+      description="I used this tech items for my personal backend projects"
+      stackItems={otherStacks}
+    />
+    <TechStackSection
+      title="Other stack's"
+      description="I used this tech items for my personal backend projects"
+      stackItems={tools}
+    />
+  </div>
+</MainLayout>

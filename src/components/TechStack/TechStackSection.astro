@@ -1,0 +1,24 @@
+---
+import type { TechStackItem } from './TechStackItem'
+import TechStackItemView from './TechStackItemView.astro'
+
+interface Props {
+  title: string
+  description: string
+  stackItems: TechStackItem[]
+}
+
+const { title, description = '', stackItems } = Astro.props
+---
+
+<div class="stack-section flex flex-col">
+  <h2
+    class="font-bold text-xl block w-max pr-2 bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:100%_40%] from-sky-300 to-sky-300"
+  >
+    {title}
+  </h2>
+  <p class="text-slate-700">{description}</p>
+  <div class="mt-5 flex gap-2 flex-wrap">
+    {stackItems.map(item => <TechStackItemView item={item} />)}
+  </div>
+</div>
