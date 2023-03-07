@@ -87,6 +87,42 @@ export const mobile: TechStackItem[] = [
     description: 'Component way to build apps',
     icon: 'kmm.svg',
     points: 70
+  },
+  {
+    title: 'SQLDelight',
+    description: 'Component way to build apps',
+    icon: 'kmm.svg',
+    points: 70
+  },
+  {
+    title: 'Jetpack Compose',
+    description: 'Component way to build apps',
+    icon: 'kmm.svg',
+    points: 70
+  },
+  {
+    title: 'SwiftUI',
+    description: 'Component way to build apps',
+    icon: 'kmm.svg',
+    points: 70
+  },
+  {
+    title: 'Okio',
+    description: 'Component way to build apps',
+    icon: 'kmm.svg',
+    points: 70
+  },
+  {
+    title: 'Koin',
+    description: 'Component way to build apps',
+    icon: 'kmm.svg',
+    points: 70
+  },
+  {
+    title: 'Kermit',
+    description: 'Component way to build apps',
+    icon: 'kmm.svg',
+    points: 70
   }
 ]
 

@@ -4,11 +4,11 @@ import HeaderLink from './HeaderLink.astro'
 import { SITE_TITLE } from '../consts'
 ---
 
-<header class="flex align-middle">
-  <h2>
+<header class="w-full flex items-center">
+  <h2 class="font-bold font-header text-lg hover:text-cyan-600">
     {SITE_TITLE}
   </h2>
-  <nav class="pl-8 flex flex-1 gap-4">
+  <nav class="pl-8 flex flex-1 gap-4 font-body">
     <HeaderLink href="/">About me</HeaderLink>
     <HeaderLink href="/techstack">Tech's</HeaderLink>
     <HeaderLink href="/blog">Blog</HeaderLink>
@@ -18,7 +18,7 @@ import { SITE_TITLE } from '../consts'
     target="_blank"
     class={`flex items-center gap-2`}
   >
-    <Icon name="mdi:github" class="w-8" />
-    <span class="h-min">GitHub</span>
+    <Icon name="mdi:github" class="w-7" />
+    <span class="h-min font-body">GitHub</span>
   </HeaderLink>
 </header>
