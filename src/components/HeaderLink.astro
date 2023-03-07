@@ -1,20 +1,87 @@
 ---
 import type { HTMLAttributes } from 'astro/types'
 
-type Props = HTMLAttributes<'a'>
+interface Props extends HTMLAttributes<'a'> {
+  animated?: Boolean
+}
 
-const { href, class: className, ...props } = Astro.props
+const { href, animated = true, class: className, ...props } = Astro.props
 
 const { pathname } = Astro.url
 const isActive = href === pathname || href === pathname.replace(/\/$/, '')
 ---
 
-<a href={href} class:list={[className, { active: isActive }]} {...props}>
+<a
+  href={href}
+  class:list={[
+    isActive ? `text-sky-500 show` : ``,
+    className,
+    { active: isActive },
+    animated ? 'unset animated-link' : 'link'
+  ]}
+  {...props}
+>
   <slot />
 </a>
 
 <style>
-  a.active {
-    text-decoration: underline;
+  @import 'tailwindcss/base';
+
+  a {
+    text-decoration: none;
+  }
+
+  .link {
+    position: relative;
+    box-decoration-break: clone;
+    text-decoration: none;
+  }
+
+  .link:after {
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    content: '';
+    height: 2px;
+    position: absolute;
+    transform: translateZ(0) scaleX(0);
+    transform-origin: left center;
+    transition: all 0.15s ease-in-out;
+    background-image: linear-gradient(
+      to right,
+      theme(colors.sky.500),
+      theme(colors.sky.500)
+    );
+  }
+
+  .animated-link {
+    position: relative;
+    box-decoration-break: clone;
+    text-decoration: none;
+  }
+
+  .animated-link:hover:after {
+    transform: translateZ(0) scale(1);
+  }
+
+  .animated-link:after {
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    content: '';
+    height: 2px;
+    position: absolute;
+    transform: translateZ(0) scaleX(0);
+    transform-origin: left center;
+    transition: all 0.15s ease-in-out;
+    background-image: linear-gradient(
+      to right,
+      theme(colors.sky.500),
+      theme(colors.sky.500)
+    );
+  }
+
+  .animated-link.show:after {
+    transform: translateZ(0) scale(1);
   }
 </style>
