@@ -203,3 +203,48 @@ export const tools: TechStackItem[] = [
     points: 80
   }
 ]
+
+export const architecture: TechStackItem[] = [
+  {
+    title: 'Clean Architecture',
+    description: 'Platform for project management',
+    icon: 'jira.svg',
+    points: 80
+  },
+  {
+    title: 'SOLID',
+    description: 'Platform for project management',
+    icon: 'jira.svg',
+    points: 80
+  },
+  {
+    title: 'DRY',
+    description: 'Platform for project management',
+    icon: 'jira.svg',
+    points: 80
+  },
+  {
+    title: 'KISS',
+    description: 'Platform for project management',
+    icon: 'jira.svg',
+    points: 80
+  },
+  {
+    title: 'MVVM',
+    description: 'Platform for project management',
+    icon: 'jira.svg',
+    points: 80
+  },
+  {
+    title: 'MVP',
+    description: 'The best code editor ever',
+    icon: 'jira.svg',
+    points: 80
+  },
+  {
+    title: 'MVI',
+    description: 'The best code editor ever',
+    icon: 'jira.svg',
+    points: 80
+  }
+]

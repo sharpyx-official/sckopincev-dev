@@ -7,6 +7,9 @@ module.exports = {
         body: ['Space Grotesk', 'sans-serif'],
         header: ['Space Grotesk', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif']
+      },
+      colors: {
+        'dark-header': '#354259'
       }
     }
   },
