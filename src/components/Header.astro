@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon'
 import HeaderLink from './HeaderLink.astro'
 import { SITE_TITLE } from '../consts'
 ---
@@ -12,7 +13,12 @@ import { SITE_TITLE } from '../consts'
     <HeaderLink href="/techstack">Tech's</HeaderLink>
     <HeaderLink href="/blog">Blog</HeaderLink>
   </nav>
-  <HeaderLink href="https://github.com/sharpyx-official" target="_blank">
-    GitHub
+  <HeaderLink
+    href="https://github.com/sharpyx-official"
+    target="_blank"
+    class={`flex items-center gap-2`}
+  >
+    <Icon name="mdi:github" class="w-8" />
+    <span class="h-min">GitHub</span>
   </HeaderLink>
 </header>
