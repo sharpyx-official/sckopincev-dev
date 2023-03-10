@@ -5,6 +5,13 @@ import Header from '@components/Header.astro'
 import i18next from 'i18next'
 
 const { title, description } = Astro.props
+let fontClass = ''
+
+if (i18next.language == 'ru') {
+  fontClass = 'font-comfortaa'
+} else {
+  fontClass = 'font-grotesk'
+}
 ---
 
 <!DOCTYPE html>
@@ -12,7 +19,7 @@ const { title, description } = Astro.props
   <head>
     <BaseHead title={title} description={description} />
   </head>
-  <body class="max-w-3xl mx-auto min-h-screen px-6 sm:px-8">
+  <body class={`max-w-3xl mx-auto min-h-screen px-6 sm:px-8 ${fontClass}`}>
     <Header />
     <main class="pt-10">
       <slot />

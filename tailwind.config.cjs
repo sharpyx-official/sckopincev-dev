@@ -6,6 +6,8 @@ module.exports = {
       fontFamily: {
         body: ['Space Grotesk', 'Comfortaa', 'sans-serif'],
         header: ['Space Grotesk', 'Comfortaa', 'sans-serif'],
+        comfortaa: ['Comfortaa', 'sans-serif'],
+        grotesk: ['Space Grotest', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif']
       },
       colors: {
