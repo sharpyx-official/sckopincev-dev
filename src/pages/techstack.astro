@@ -10,6 +10,7 @@ import {
 import TechStackSection from '@components/TechStack/TechStackSection.astro'
 import TextHeader from '@components/TextHeader.astro'
 import MainLayout from '@layouts/MainLayout.astro'
+import { t } from 'i18next'
 ---
 
 <MainLayout
@@ -18,41 +19,40 @@ import MainLayout from '@layouts/MainLayout.astro'
 >
   <div class="flex flex-col">
     <div class="self-center text-4xl">
-      <TextHeader class={`text-dark-header`}>Tech stack that I use</TextHeader>
+      <TextHeader class={`text-dark-header`}>
+        {t('pages.techstack.title')}
+      </TextHeader>
     </div>
-    <p class="pt-8 pb-8">
-      Here described my technical stack that i use. Most experienced in Mobile
-      development, I have another skills that allows me to make self projects.
-    </p>
+    <p class="pt-8 pb-8">{t('pages.techstack.short_description')}</p>
     <div class="stack-list flex flex-col gap-16">
       <TechStackSection
-        title="Mobile development"
-        description="It's my main direction of development, i use:"
+        title={t('pages.techstack.mobile.title')}
+        description={t('pages.techstack.mobile.description')}
         stackItems={mobile}
       />
       <TechStackSection
-        title="Frontend"
-        description="I used this tech items for my personal frontend projects"
+        title={t('pages.techstack.frontend.title')}
+        description={t('pages.techstack.frontend.description')}
         stackItems={frontend}
       />
       <TechStackSection
-        title="Backend"
-        description="I used this tech items for my personal backend projects"
+        title={t('pages.techstack.backend.title')}
+        description={t('pages.techstack.backend.description')}
         stackItems={backend}
       />
       <TechStackSection
-        title="Things for better apps"
-        description="I used this tech items for my personal backend projects"
+        title={t('pages.techstack.architecture.title')}
+        description={t('pages.techstack.architecture.description')}
         stackItems={architecture}
       />
       <TechStackSection
-        title="Other stack's"
-        description="I used this tech items for my personal backend projects"
+        title={t('pages.techstack.otherstacks.title')}
+        description={t('pages.techstack.otherstacks.description')}
         stackItems={otherStacks}
       />
       <TechStackSection
-        title="Tools"
-        description="I used this tech items for my personal backend projects"
+        title={t('pages.techstack.tools.title')}
+        description={t('pages.techstack.tools.description')}
         stackItems={tools}
       />
     </div>

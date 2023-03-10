@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Space Grotesk', 'sans-serif'],
-        header: ['Space Grotesk', 'sans-serif'],
+        body: ['Space Grotesk', 'Comfortaa', 'sans-serif'],
+        header: ['Space Grotesk', 'Comfortaa', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif']
       },
       colors: {
