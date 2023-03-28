@@ -10,6 +10,8 @@
   },
   "pages": {
     "about": {
+      "title": "About me",
+      "page_description": "Artem Skopincev - About me",
       "short_description": "Hey! Welcome to my personal website. Thank your for you visit. Here you can see my tech stack, some useful tips and blog articles. You can write me an email (link in the footer)."
     },
     "techstack": {
