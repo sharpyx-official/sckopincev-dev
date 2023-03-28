@@ -1,0 +1,14 @@
+---
+import type { WorkItem } from '@data/HistoryOfWorkService'
+import HistoryOfWorkItem from './HistoryOfWorkItem.astro'
+
+interface Props {
+  works: WorkItem[]
+}
+
+const { works } = Astro.props
+---
+
+<div>
+  {works.map(work => <HistoryOfWorkItem work={work} />)}
+</div>

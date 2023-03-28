@@ -1,0 +1,16 @@
+---
+import type { WorkItem } from '@data/HistoryOfWorkService'
+
+interface Props {
+  work: WorkItem
+}
+
+const { work } = Astro.props
+---
+
+<div
+  class="flex flex-col relative border-l-8 pl-8 border-sky-300 before:content-[''] before:block before:w-6 before:h-6 before:rounded-full before:bg-white before:absolute before:top-0 before:-left-4 after:content-[''] after:block after:w-4 after:h-4 after:rounded-full after:bg-sky-300 after:absolute after:top-1 after:-left-3"
+>
+  <h1>{work.company}</h1>
+  <p class="whitespace-pre-line text-green-600 py-3">{work.description}</p>
+</div>

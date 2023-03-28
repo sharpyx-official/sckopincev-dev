@@ -1,5 +1,7 @@
 ---
+import HistoryOfWork from '@components/About/HistoryOfWork.astro'
 import TextHeader from '@components/TextHeader.astro'
+import { HistoryOfWorkDb } from '@data/HistoryOfWorkService'
 import MainLayout from '@layouts/MainLayout.astro'
 import { t } from 'i18next'
 ---
@@ -13,5 +15,6 @@ import { t } from 'i18next'
       <TextHeader>{t('common.myname')}</TextHeader>
     </div>
     <p>{t('pages.about.short_description')}</p>
+    <HistoryOfWork works={HistoryOfWorkDb.reverse()} />
   </main>
 </MainLayout>
