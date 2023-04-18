@@ -9,7 +9,7 @@ interface Props {
 const { work } = Astro.props
 const pointsOfJob = work.description.split('\n')
 
-function formatDate(date: Date): string {
+function formatDateRange(date: Date): string {
   const locale = i18next.language === 'ru' ? 'ru-RU' : 'en-US'
 
   return date.toLocaleDateString(locale, {
@@ -19,16 +19,32 @@ function formatDate(date: Date): string {
 }
 ---
 
-<div
-  class="flex flex-col relative border-l-4 pl-8 border-zinc-800 before:content-[''] before:block before:bg-white before:border-zinc-800 before:border-4 before:w-[22px] before:h-[22px] before:rounded-full before:absolute before:top-[-1px] before:-left-[13px]"
+<div class="flex
+  flex-col
+  relative
+  border-l-4
+  pl-8
+  border-zinc-800
+  before:content-['']
+  before:block
+  before:bg-white
+  before:border-zinc-800
+  before:border-4
+  before:w-[22px]
+  before:h-[22px]
+  before:rounded-full
+  before:absolute
+  before:top-[-1px]
+  before:-left-[13px]
+  "
 >
-  <h1 class="text-lg font-semibold">
-    {work.company}, <span class="italic font-normal">{work.role}</span>
-  </h1>
+  <h1 class="text-lg font-semibold flex flex-col md:block">
+    {work.company}, <span class="italic font-normal">{work.role}</span> 
+  </h1> 
   <p class="text-neutral-500">
-    {formatDate(work.dateRange.fromDate)} - {formatDate(work.dateRange.endDate)}
-  </p>
-  <ul class="text-neutral-600 py-3 list-disc flex flex-col gap-1">
-    {pointsOfJob.map(point => <li>{point}</li>)}
-  </ul>
+    {formatDateRange(work.dateRange.fromDate)} - {formatDateRange(work.dateRange.endDate)}
+  </p> 
+  <ul class="text-neutral-600 py-3 list-disc flex flex-col gap-1"> 
+    {pointsOfJob.map(point => <li>{point}</li>)} 
+  </ul> 
 </div>

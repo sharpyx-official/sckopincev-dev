@@ -4,11 +4,11 @@ import { Icon } from 'astro-icon'
 import HeaderLink from './HeaderLink.astro'
 ---
 
-<header class="w-full flex items-center">
+<header class="w-full flex justify-between items-center">
   <h2 class="font-bold font-header text-lg hover:text-cyan-600">
     {t('header.title')}
   </h2>
-  <nav class="pl-8 flex flex-1 gap-4 font-body">
+  <nav class="pl-8 hidden md:flex md:flex-1 md:gap-4 font-body">
     <HeaderLink href="/">{t('header.about')}</HeaderLink>
     <HeaderLink href="/techstack">{t('header.techstack')}</HeaderLink>
     <HeaderLink href="/blog">{t('header.blog')}</HeaderLink>
