@@ -1,5 +1,6 @@
 ---
 import type { WorkItem } from '@data/HistoryOfWorkService'
+import i18next from 'i18next'
 
 interface Props {
   work: WorkItem
@@ -9,7 +10,9 @@ const { work } = Astro.props
 const pointsOfJob = work.description.split('\n')
 
 function formatDate(date: Date): string {
-  return date.toLocaleDateString("ru-RU", {
+  const locale = i18next.language === 'ru' ? 'ru-RU' : 'en-US'
+  
+  return date.toLocaleDateString(locale, {
     month: "long",
     year: "numeric"
   })
