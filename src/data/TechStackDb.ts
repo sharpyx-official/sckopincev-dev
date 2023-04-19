@@ -1,4 +1,4 @@
-import type { TechStackItem } from './TechStackItem'
+import type { TechStackItem } from "./entities/TechStackItem"
 
 export const frontend: TechStackItem[] = [
   {

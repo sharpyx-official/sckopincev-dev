@@ -1,16 +1,6 @@
 import { t } from 'i18next'
+import type { WorkItem } from './entities/WorkItem'
 
-export interface DateRange {
-  fromDate: Date
-  endDate: Date
-}
-
-export interface WorkItem {
-  company: string
-  role: string
-  dateRange: DateRange
-  description: string
-}
 export const HistoryOfWorkDb: WorkItem[] = [
   {
     company: 'ООО "Мобайл АП"',
