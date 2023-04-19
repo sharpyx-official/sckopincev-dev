@@ -17,7 +17,7 @@ const { title, description = '', stackItems } = Astro.props
   >
     {title}
   </h2>
-  <p class="text-slate-700">{description}</p>
+  <p class="text-slate-700 pt-2">{description}</p>
   <div class="mt-5 flex gap-2 flex-wrap">
     {stackItems.map(item => <TechStackItemView item={item} />)}
   </div>
