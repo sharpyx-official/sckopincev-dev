@@ -18,6 +18,12 @@ export const frontend: TechStackItem[] = [
     description: 'Library for frontend applications',
     icon: 'react.svg',
     points: 30
+  },
+  {
+    title: 'Next.js',
+    description: 'Library for frontend applications',
+    icon: 'react.svg',
+    points: 30
   }
 ]
 
@@ -29,12 +35,6 @@ export const backend: TechStackItem[] = [
     points: 70
   },
   {
-    title: 'Mongo DB',
-    description: 'Document-oriented database',
-    icon: 'mongo.svg',
-    points: 50
-  },
-  {
     title: 'Admin.js',
     description:
       'Library for fast buildign admin panel for your backend with simple (or not) CRUD operations.',
@@ -43,6 +43,12 @@ export const backend: TechStackItem[] = [
   },
   {
     title: 'Mongo DB',
+    description: 'Document-oriented database',
+    icon: 'mongo.svg',
+    points: 50
+  },
+  {
+    title: 'PostgreSQL',
     description: 'Document-oriented database',
     icon: 'mongo.svg',
     points: 50
@@ -114,6 +120,18 @@ export const mobile: TechStackItem[] = [
   },
   {
     title: 'Koin',
+    description: 'Component way to build apps',
+    icon: 'kmm.svg',
+    points: 70
+  },
+  {
+    title: 'Dagger 2',
+    description: 'Component way to build apps',
+    icon: 'kmm.svg',
+    points: 70
+  },
+  {
+    title: 'Dagger Hilt',
     description: 'Component way to build apps',
     icon: 'kmm.svg',
     points: 70
