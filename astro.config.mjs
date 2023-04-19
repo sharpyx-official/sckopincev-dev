@@ -6,6 +6,7 @@ import tailwind from '@astrojs/tailwind'
 import astroI18next from 'astro-i18next'
 
 export default defineConfig({
-  site: 'https://skopincev.dev',
+  site: 'https://sharpyx-official.github.com',
+  base: '/sckopincev-dev',
   integrations: [mdx(), sitemap(), react(), tailwind(), astroI18next()]
 })
