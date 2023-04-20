@@ -1,5 +1,6 @@
 ---
-import type { TechStackItem } from '@data/TechStackItem';
+import type { TechStackItem } from '@data/entities/TechStackItem';
+
 
 
 interface Props {
@@ -10,7 +11,20 @@ const { item } = Astro.props
 ---
 
 <div
-  class="tack-stack-item p-1 px-3 rounded-lg bg-cyan-500 shadow-md shadow-cyan-500/50 hover:shadow-xl text-white hover:bg-cyan-600 cursor-pointer"
+  class="tack-stack-item
+  p-1
+  px-3
+  rounded-lg
+  border-[1px]
+  border-zinc-800
+  shadow-sm
+  shadow-zinc-400/50
+  text-zinc-800
+  hover:shadow-xl
+  hover:bg-zinc-800
+  hover:text-white
+  cursor-pointer
+  "
 >
   <p>{item.title}</p>
 </div>
