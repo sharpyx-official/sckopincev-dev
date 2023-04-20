@@ -4,14 +4,29 @@ import { Icon } from 'astro-icon'
 const { class: className } = Astro.props
 ---
 
-<div class:list={['flex flex-row gap-20 text-zinc-800', className]}>
-  <a href="https://github.com/sharpyx-official">
-    <Icon name="mdi:github" class="w-8 hover:text-sky-700" />
+<div
+  class:list={['flex flex-col gap-4 text-zinc-800 justify-start', className]}
+>
+  <h1 class="font-bold">Контакты</h1>
+  <a
+    class="flex flex-row gap-2 items-center hover:text-sky-700"
+    href="https://github.com/sharpyx-official"
+  >
+    <Icon name="mdi:github" class="w-8" />
+    <p>sharpyx-official</p>
   </a>
-  <a href="mailto://sckopincev.artyom@gmail.com">
+  <a
+    class="flex flex-row gap-2 items-center hover:text-sky-700"
+    href="mailto://sckopincev.artyom@gmail.com"
+  >
     <Icon name="mdi:alternate-email" class="w-8 hover:text-sky-700" />
+    <p>sckopincev.artyom@gmail.com</p>
   </a>
-  <a href="https://t.me/sharpyx_official">
+  <a
+    class="flex flex-row gap-2 items-center hover:text-sky-700"
+    href="https://t.me/sharpyx_official"
+  >
     <Icon name="ic:baseline-telegram" class="w-8 hover:text-sky-700" />
+    <p>Sharpyx_Official</p>
   </a>
 </div>
