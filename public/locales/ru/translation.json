@@ -43,6 +43,8 @@
       }
     },
     "blog": {
+      "title": "Artem Skopincev - Блог",
+      "description": "Artem Skopincev - Блог",
       "empty_state": "Тут пока пусто, но обязательно что-нибудь да появится!"
     }
   },
