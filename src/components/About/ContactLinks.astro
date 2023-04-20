@@ -1,0 +1,17 @@
+---
+import { Icon } from 'astro-icon'
+
+const { class: className } = Astro.props
+---
+
+<div class:list={['flex flex-row gap-20 text-zinc-800', className]}>
+  <a href="https://github.com/sharpyx-official">
+    <Icon name="mdi:github" class="w-8 hover:text-sky-700" />
+  </a>
+  <a href="mailto://sckopincev.artyom@gmail.com">
+    <Icon name="mdi:alternate-email" class="w-8 hover:text-sky-700" />
+  </a>
+  <a href="https://t.me/sharpyx_official">
+    <Icon name="ic:baseline-telegram" class="w-8 hover:text-sky-700" />
+  </a>
+</div>
