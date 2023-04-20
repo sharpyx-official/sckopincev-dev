@@ -16,12 +16,16 @@ const posts = (await getCollection('blog')).sort(
   <section>
     <ul>
       {
-        posts.map(post => (
-          <li>
-            <FormattedDate date={post.data.pubDate} />
-            <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-          </li>
-        ))
+        posts.length > 0 ? (
+          posts.map(post => (
+            <li>
+              <FormattedDate date={post.data.pubDate} />
+              <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+            </li>
+          ))
+        ) : (
+          <p class="text-center p-8">{t('pages.blog.empty_state')}</p>
+        )
       }
     </ul>
   </section>

@@ -41,6 +41,9 @@
         "title": "Tools",
         "description": "I used this tech items for my personal backend projects"
       }
+    },
+    "blog": {
+      "empty_state": "It's empty for now, but there's bound to be something soon."
     }
   }
 }
